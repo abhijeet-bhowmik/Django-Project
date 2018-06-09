@@ -3,8 +3,10 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
 
+
 <h1>The Question is : {{question.question_text}}</h1>
 {%if error_message%}<p><strong>Error in Loading the Question. Try again.</strong></p>{%endif%}
+
 	
 <form action = "{%url 'polls:vote' question.id%}" method="post">
 	
